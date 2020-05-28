@@ -5,7 +5,26 @@ xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
 xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-    <include file="src/main/resources/db/changelog/changelog1.xml"/>
-    <include file="src/main/resources/db/changelog/changelog2.xml"/>
+    <changeSet id="change_1" author="izdebski" dbms="postgresql">
+        <preConditions>
+            <rowCount expectedRows="0" tableName="Emp"/>
+        </preConditions>
+        <createTable tableName="Emp">
+            <column name="empId" type="int"></column>
+            <column name="empName" type="varchar(100)"></column>
+            <column name="loc" type="varchar(100)"></column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="change_2" author="izdebski" runInTransaction="true">
+        <createTable tableName="Dept">
+            <column name="deptId" type="int"></column>
+            <column name="deptName" type="varchar(100)"></column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="change_4" author="izdebski" runAlways="true">
+
+    </changeSet>
 
 </databaseChangeLog>
