@@ -5,11 +5,7 @@ xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
 xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-    <changeSet id="change_1" author="izdebski">
-        <createTable tableName="Emp">
-            <column name="EmpId" type="int"></column>
-            <column name="EmpName" type="varchar(10)"></column>
-        </createTable>
-    </changeSet>
+    <include file="src/main/resources/db/changelog/changelog1.xml"/>
+    <include file="src/main/resources/db/changelog/changelog2.xml"/>
 
 </databaseChangeLog>
