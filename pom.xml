@@ -55,13 +55,8 @@
           <groupId>org.liquibase</groupId>
           <artifactId>liquibase-maven-plugin</artifactId>
           <version>4.0.0-beta1</version>
-
-
           <configuration>
             <propertyFile>src/main/resources/liquibase.properties</propertyFile>
-            <url>jdbc:postgresql://localhost:5432/liquibasetutorial</url>
-            <username>postgres</username>
-            <password>postgres</password>
           </configuration>
           <dependencies>
             <dependency>

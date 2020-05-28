@@ -1,18 +1,13 @@
-<databaseChangeLog
-xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
 xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <changeSet id="change_1" author="izdebski" dbms="postgresql">
-        <preConditions>
-            <rowCount expectedRows="0" tableName="Emp"/>
-        </preConditions>
         <createTable tableName="Emp">
             <column name="empId" type="int"></column>
             <column name="empName" type="varchar(100)"></column>
-            <column name="loc" type="varchar(100)"></column>
         </createTable>
     </changeSet>
 
